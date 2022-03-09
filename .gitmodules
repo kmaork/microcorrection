@@ -1,0 +1,6 @@
+[submodule "naken_asm"]
+	path = naken_asm
+	url = git@github.com:mikeakohn/naken_asm.git
+[submodule "msp430-emu-uctf"]
+	path = msp430-emu-uctf
+	url = git@github.com:kmaork/msp430-emu-uctf.git

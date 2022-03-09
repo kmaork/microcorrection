@@ -1,0 +1,40 @@
+Lockitall                                            LOCKIT PRO r a.01
+______________________________________________________________________
+
+              User Manual: Lockitall LockIT Pro, rev a.01              
+______________________________________________________________________
+
+
+OVERVIEW
+
+    - This is the first LockIT Pro Lock.
+    - This lock is not attached to any hardware security module.
+
+
+DETAILS
+
+    The LockIT Pro a.01  is the first of a new series  of locks. It is
+    controlled by a  MSP430 microcontroller, and is  the most advanced
+    MCU-controlled lock available on the  market. The MSP430 is a very
+    low-power device which allows the LockIT  Pro to run in almost any
+    environment.
+
+    The  LockIT  Pro   contains  a  Bluetooth  chip   allowing  it  to
+    communiciate with the  LockIT Pro App, allowing the  LockIT Pro to
+    be inaccessable from the exterior of the building.
+
+    There is  no default password  on the LockIT  Pro---upon receiving
+    the LockIT Pro, a new password must be set by connecting it to the
+    LockIT Pro  App and  entering a password  when prompted,  and then
+    restarting the LockIT Pro using the red button on the back.
+    
+    This is Hardware  Version A.  It contains  the Bluetooth connector
+    built in, and one available port  to which the LockIT Pro Deadbolt
+    should be connected.
+
+    This is Software Revision 01.
+
+    
+
+
+(c) 2013 LOCKITALL                                            Page 1/1

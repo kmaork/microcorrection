@@ -1,0 +1,802 @@
+<code class="asmbox" id="asmbox"><div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>0010 &lt;__trap_interrupt&gt;</pre>
+</div>
+<div class="insn" id="insn0010" onclick="togglebreakpoint(this.id)">
+<pre>0010:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4400 &lt;__init_stack&gt;</pre>
+</div>
+<div class="insn" id="insn4400" onclick="togglebreakpoint(this.id)">
+<pre>4400:  3140 0044      mov	#0x4400, sp</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4404 &lt;__low_level_init&gt;</pre>
+</div>
+<div class="insn" id="insn4404" onclick="togglebreakpoint(this.id)">
+<pre>4404:  1542 5c01      mov	&amp;0x015c, r5</pre>
+</div>
+<div class="insn" id="insn4408" onclick="togglebreakpoint(this.id)">
+<pre>4408:  75f3           and.b	#-0x1, r5</pre>
+</div>
+<div class="insn" id="insn440a" onclick="togglebreakpoint(this.id)">
+<pre>440a:  35d0 085a      bis	#0x5a08, r5</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>440e &lt;__do_copy_data&gt;</pre>
+</div>
+<div class="insn" id="insn440e" onclick="togglebreakpoint(this.id)">
+<pre>440e:  3f40 0400      mov	#0x4, r15</pre>
+</div>
+<div class="insn" id="insn4412" onclick="togglebreakpoint(this.id)">
+<pre>4412:  0f93           tst	r15</pre>
+</div>
+<div class="insn" id="insn4414" onclick="togglebreakpoint(this.id)">
+<pre>4414:  0724           jz	#0x4424 &lt;__do_clear_bss+0x0&gt;</pre>
+</div>
+<div class="insn" id="insn4416" onclick="togglebreakpoint(this.id)">
+<pre>4416:  8245 5c01      mov	r5, &amp;0x015c</pre>
+</div>
+<div class="insn" id="insn441a" onclick="togglebreakpoint(this.id)">
+<pre>441a:  2f83           decd	r15</pre>
+</div>
+<div class="insn" id="insn441c" onclick="togglebreakpoint(this.id)">
+<pre>441c:  9f4f 6a47 0024 mov	0x476a(r15), 0x2400(r15)</pre>
+</div>
+<div class="insn" id="insn4422" onclick="togglebreakpoint(this.id)">
+<pre>4422:  f923           jnz	#0x4416 &lt;__do_copy_data+0x8&gt;</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4424 &lt;__do_clear_bss&gt;</pre>
+</div>
+<div class="insn" id="insn4424" onclick="togglebreakpoint(this.id)">
+<pre>4424:  3f40 6400      mov	#0x64, r15</pre>
+</div>
+<div class="insn" id="insn4428" onclick="togglebreakpoint(this.id)">
+<pre>4428:  0f93           tst	r15</pre>
+</div>
+<div class="insn" id="insn442a" onclick="togglebreakpoint(this.id)">
+<pre>442a:  0624           jz	#0x4438 &lt;main+0x0&gt;</pre>
+</div>
+<div class="insn" id="insn442c" onclick="togglebreakpoint(this.id)">
+<pre>442c:  8245 5c01      mov	r5, &amp;0x015c</pre>
+</div>
+<div class="insn" id="insn4430" onclick="togglebreakpoint(this.id)">
+<pre>4430:  1f83           dec	r15</pre>
+</div>
+<div class="insn" id="insn4432" onclick="togglebreakpoint(this.id)">
+<pre>4432:  cf43 0424      mov.b	#0x0, 0x2404(r15)</pre>
+</div>
+<div class="insn" id="insn4436" onclick="togglebreakpoint(this.id)">
+<pre>4436:  fa23           jnz	#0x442c &lt;__do_clear_bss+0x8&gt;</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4438 &lt;main&gt;</pre>
+</div>
+<div class="insn" id="insn4438" onclick="togglebreakpoint(this.id)">
+<pre>4438:  3150 ceff      add	#0xffce, sp</pre>
+</div>
+<div class="insn" id="insn443c" onclick="togglebreakpoint(this.id)">
+<pre>443c:  b012 5045      call	#0x4550 &lt;login&gt;</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4440 &lt;__stop_progExec__&gt;</pre>
+</div>
+<div class="insn" id="insn4440" onclick="togglebreakpoint(this.id)">
+<pre>4440:  32d0 f000      bis	#0xf0, sr</pre>
+</div>
+<div class="insn" id="insn4444" onclick="togglebreakpoint(this.id)">
+<pre>4444:  fd3f           jmp	#0x4440 &lt;__stop_progExec__+0x0&gt;</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4446 &lt;__ctors_end&gt;</pre>
+</div>
+<div class="insn" id="insn4446" onclick="togglebreakpoint(this.id)">
+<pre>4446:  3040 6847      br	#0x4768 &lt;_unexpected_&gt;</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>444a &lt;unlock_door&gt;</pre>
+</div>
+<div class="insn" id="insn444a" onclick="togglebreakpoint(this.id)">
+<pre>444a:  3012 7f00      push	#0x7f</pre>
+</div>
+<div class="insn" id="insn444e" onclick="togglebreakpoint(this.id)">
+<pre>444e:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn4452" onclick="togglebreakpoint(this.id)">
+<pre>4452:  2153           incd	sp</pre>
+</div>
+<div class="insn" id="insn4454" onclick="togglebreakpoint(this.id)">
+<pre>4454:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4456 &lt;test_username_and_password_valid&gt;</pre>
+</div>
+<div class="insn" id="insn4456" onclick="togglebreakpoint(this.id)">
+<pre>4456:  0412           push	r4</pre>
+</div>
+<div class="insn" id="insn4458" onclick="togglebreakpoint(this.id)">
+<pre>4458:  0441           mov	sp, r4</pre>
+</div>
+<div class="insn" id="insn445a" onclick="togglebreakpoint(this.id)">
+<pre>445a:  2453           incd	r4</pre>
+</div>
+<div class="insn" id="insn445c" onclick="togglebreakpoint(this.id)">
+<pre>445c:  2183           decd	sp</pre>
+</div>
+<div class="insn" id="insn445e" onclick="togglebreakpoint(this.id)">
+<pre>445e:  c443 fcff      mov.b	#0x0, -0x4(r4)</pre>
+</div>
+<div class="insn" id="insn4462" onclick="togglebreakpoint(this.id)">
+<pre>4462:  3d40 fcff      mov	#0xfffc, r13</pre>
+</div>
+<div class="insn" id="insn4466" onclick="togglebreakpoint(this.id)">
+<pre>4466:  0d54           add	r4, r13</pre>
+</div>
+<div class="insn" id="insn4468" onclick="togglebreakpoint(this.id)">
+<pre>4468:  0d12           push	r13</pre>
+</div>
+<div class="insn" id="insn446a" onclick="togglebreakpoint(this.id)">
+<pre>446a:  0e12           push	r14</pre>
+</div>
+<div class="insn" id="insn446c" onclick="togglebreakpoint(this.id)">
+<pre>446c:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn446e" onclick="togglebreakpoint(this.id)">
+<pre>446e:  3012 7d00      push	#0x7d</pre>
+</div>
+<div class="insn" id="insn4472" onclick="togglebreakpoint(this.id)">
+<pre>4472:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn4476" onclick="togglebreakpoint(this.id)">
+<pre>4476:  5f44 fcff      mov.b	-0x4(r4), r15</pre>
+</div>
+<div class="insn" id="insn447a" onclick="togglebreakpoint(this.id)">
+<pre>447a:  8f11           sxt	r15</pre>
+</div>
+<div class="insn" id="insn447c" onclick="togglebreakpoint(this.id)">
+<pre>447c:  3150 0a00      add	#0xa, sp</pre>
+</div>
+<div class="insn" id="insn4480" onclick="togglebreakpoint(this.id)">
+<pre>4480:  3441           pop	r4</pre>
+</div>
+<div class="insn" id="insn4482" onclick="togglebreakpoint(this.id)">
+<pre>4482:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4484 .strings:</pre>
+</div>
+<div class="insn" id="insn4484" onclick="togglebreakpoint(this.id)">
+<pre>4484: "Authentication now requires a username and password."</pre>
+</div>
+<div class="insn" id="insn44b9" onclick="togglebreakpoint(this.id)">
+<pre>44b9: "Remember: both are between 8 and 16 characters."</pre>
+</div>
+<div class="insn" id="insn44e9" onclick="togglebreakpoint(this.id)">
+<pre>44e9: "Please enter your username:"</pre>
+</div>
+<div class="insn" id="insn4505" onclick="togglebreakpoint(this.id)">
+<pre>4505: "Please enter your password:"</pre>
+</div>
+<div class="insn" id="insn4521" onclick="togglebreakpoint(this.id)">
+<pre>4521: "Access granted."</pre>
+</div>
+<div class="insn" id="insn4531" onclick="togglebreakpoint(this.id)">
+<pre>4531: "That password is not correct."</pre>
+</div>
+<div class="insn" id="insn454f" onclick="togglebreakpoint(this.id)">
+<pre>454f: ""</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4550 &lt;login&gt;</pre>
+</div>
+<div class="insn" id="insn4550" onclick="togglebreakpoint(this.id)">
+<pre>4550:  0b12           push	r11</pre>
+</div>
+<div class="insn" id="insn4552" onclick="togglebreakpoint(this.id)">
+<pre>4552:  0412           push	r4</pre>
+</div>
+<div class="insn" id="insn4554" onclick="togglebreakpoint(this.id)">
+<pre>4554:  0441           mov	sp, r4</pre>
+</div>
+<div class="insn" id="insn4556" onclick="togglebreakpoint(this.id)">
+<pre>4556:  2452           add	#0x4, r4</pre>
+</div>
+<div class="insn" id="insn4558" onclick="togglebreakpoint(this.id)">
+<pre>4558:  3150 d8ff      add	#0xffd8, sp</pre>
+</div>
+<div class="insn" id="insn455c" onclick="togglebreakpoint(this.id)">
+<pre>455c:  c443 faff      mov.b	#0x0, -0x6(r4)</pre>
+</div>
+<div class="insn" id="insn4560" onclick="togglebreakpoint(this.id)">
+<pre>4560:  f442 e7ff      mov.b	#0x8, -0x19(r4)</pre>
+</div>
+<div class="insn" id="insn4564" onclick="togglebreakpoint(this.id)">
+<pre>4564:  f440 1000 e8ff mov.b	#0x10, -0x18(r4)</pre>
+</div>
+<div class="insn" id="insn456a" onclick="togglebreakpoint(this.id)">
+<pre>456a:  3f40 8444      mov	#0x4484 "Authentication now requires a username and password.", r15</pre>
+</div>
+<div class="insn" id="insn456e" onclick="togglebreakpoint(this.id)">
+<pre>456e:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn4572" onclick="togglebreakpoint(this.id)">
+<pre>4572:  3f40 b944      mov	#0x44b9 "Remember: both are between 8 and 16 characters.", r15</pre>
+</div>
+<div class="insn" id="insn4576" onclick="togglebreakpoint(this.id)">
+<pre>4576:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn457a" onclick="togglebreakpoint(this.id)">
+<pre>457a:  3f40 e944      mov	#0x44e9 "Please enter your username:", r15</pre>
+</div>
+<div class="insn" id="insn457e" onclick="togglebreakpoint(this.id)">
+<pre>457e:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn4582" onclick="togglebreakpoint(this.id)">
+<pre>4582:  3e40 6300      mov	#0x63, r14</pre>
+</div>
+<div class="insn" id="insn4586" onclick="togglebreakpoint(this.id)">
+<pre>4586:  3f40 0424      mov	#0x2404, r15</pre>
+</div>
+<div class="insn" id="insn458a" onclick="togglebreakpoint(this.id)">
+<pre>458a:  b012 1847      call	#0x4718 &lt;getsn&gt;</pre>
+</div>
+<div class="insn" id="insn458e" onclick="togglebreakpoint(this.id)">
+<pre>458e:  3f40 0424      mov	#0x2404, r15</pre>
+</div>
+<div class="insn" id="insn4592" onclick="togglebreakpoint(this.id)">
+<pre>4592:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn4596" onclick="togglebreakpoint(this.id)">
+<pre>4596:  3e40 0424      mov	#0x2404, r14</pre>
+</div>
+<div class="insn" id="insn459a" onclick="togglebreakpoint(this.id)">
+<pre>459a:  0f44           mov	r4, r15</pre>
+</div>
+<div class="insn" id="insn459c" onclick="togglebreakpoint(this.id)">
+<pre>459c:  3f50 d6ff      add	#0xffd6, r15</pre>
+</div>
+<div class="insn" id="insn45a0" onclick="togglebreakpoint(this.id)">
+<pre>45a0:  b012 5447      call	#0x4754 &lt;strcpy&gt;</pre>
+</div>
+<div class="insn" id="insn45a4" onclick="togglebreakpoint(this.id)">
+<pre>45a4:  3f40 0545      mov	#0x4505 "Please enter your password:", r15</pre>
+</div>
+<div class="insn" id="insn45a8" onclick="togglebreakpoint(this.id)">
+<pre>45a8:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn45ac" onclick="togglebreakpoint(this.id)">
+<pre>45ac:  3e40 6300      mov	#0x63, r14</pre>
+</div>
+<div class="insn" id="insn45b0" onclick="togglebreakpoint(this.id)">
+<pre>45b0:  3f40 0424      mov	#0x2404, r15</pre>
+</div>
+<div class="insn" id="insn45b4" onclick="togglebreakpoint(this.id)">
+<pre>45b4:  b012 1847      call	#0x4718 &lt;getsn&gt;</pre>
+</div>
+<div class="insn" id="insn45b8" onclick="togglebreakpoint(this.id)">
+<pre>45b8:  3f40 0424      mov	#0x2404, r15</pre>
+</div>
+<div class="insn" id="insn45bc" onclick="togglebreakpoint(this.id)">
+<pre>45bc:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn45c0" onclick="togglebreakpoint(this.id)">
+<pre>45c0:  0b44           mov	r4, r11</pre>
+</div>
+<div class="insn" id="insn45c2" onclick="togglebreakpoint(this.id)">
+<pre>45c2:  3b50 e9ff      add	#0xffe9, r11</pre>
+</div>
+<div class="insn" id="insn45c6" onclick="togglebreakpoint(this.id)">
+<pre>45c6:  3e40 0424      mov	#0x2404, r14</pre>
+</div>
+<div class="insn" id="insn45ca" onclick="togglebreakpoint(this.id)">
+<pre>45ca:  0f4b           mov	r11, r15</pre>
+</div>
+<div class="insn" id="insn45cc" onclick="togglebreakpoint(this.id)">
+<pre>45cc:  b012 5447      call	#0x4754 &lt;strcpy&gt;</pre>
+</div>
+<div class="insn" id="insn45d0" onclick="togglebreakpoint(this.id)">
+<pre>45d0:  0f4b           mov	r11, r15</pre>
+</div>
+<div class="insn" id="insn45d2" onclick="togglebreakpoint(this.id)">
+<pre>45d2:  0e44           mov	r4, r14</pre>
+</div>
+<div class="insn" id="insn45d4" onclick="togglebreakpoint(this.id)">
+<pre>45d4:  3e50 e8ff      add	#0xffe8, r14</pre>
+</div>
+<div class="insn" id="insn45d8" onclick="togglebreakpoint(this.id)">
+<pre>45d8:  1e53           inc	r14</pre>
+</div>
+<div class="insn" id="insn45da" onclick="togglebreakpoint(this.id)">
+<pre>45da:  ce93 0000      tst.b	0x0(r14)</pre>
+</div>
+<div class="insn" id="insn45de" onclick="togglebreakpoint(this.id)">
+<pre>45de:  fc23           jnz	#0x45d8 &lt;login+0x88&gt;</pre>
+</div>
+<div class="insn" id="insn45e0" onclick="togglebreakpoint(this.id)">
+<pre>45e0:  0b4e           mov	r14, r11</pre>
+</div>
+<div class="insn" id="insn45e2" onclick="togglebreakpoint(this.id)">
+<pre>45e2:  0b8f           sub	r15, r11</pre>
+</div>
+<div class="insn" id="insn45e4" onclick="togglebreakpoint(this.id)">
+<pre>45e4:  5f44 e8ff      mov.b	-0x18(r4), r15</pre>
+</div>
+<div class="insn" id="insn45e8" onclick="togglebreakpoint(this.id)">
+<pre>45e8:  8f11           sxt	r15</pre>
+</div>
+<div class="insn" id="insn45ea" onclick="togglebreakpoint(this.id)">
+<pre>45ea:  0b9f           cmp	r15, r11</pre>
+</div>
+<div class="insn" id="insn45ec" onclick="togglebreakpoint(this.id)">
+<pre>45ec:  0628           jnc	#0x45fa &lt;login+0xaa&gt;</pre>
+</div>
+<div class="insn" id="insn45ee" onclick="togglebreakpoint(this.id)">
+<pre>45ee:  1f42 0024      mov	&amp;0x2400, r15</pre>
+</div>
+<div class="insn" id="insn45f2" onclick="togglebreakpoint(this.id)">
+<pre>45f2:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn45f6" onclick="togglebreakpoint(this.id)">
+<pre>45f6:  3040 4044      br	#0x4440 &lt;__stop_progExec__&gt;</pre>
+</div>
+<div class="insn" id="insn45fa" onclick="togglebreakpoint(this.id)">
+<pre>45fa:  5f44 e7ff      mov.b	-0x19(r4), r15</pre>
+</div>
+<div class="insn" id="insn45fe" onclick="togglebreakpoint(this.id)">
+<pre>45fe:  8f11           sxt	r15</pre>
+</div>
+<div class="insn" id="insn4600" onclick="togglebreakpoint(this.id)">
+<pre>4600:  0b9f           cmp	r15, r11</pre>
+</div>
+<div class="insn" id="insn4602" onclick="togglebreakpoint(this.id)">
+<pre>4602:  062c           jc	#0x4610 &lt;login+0xc0&gt;</pre>
+</div>
+<div class="insn" id="insn4604" onclick="togglebreakpoint(this.id)">
+<pre>4604:  1f42 0224      mov	&amp;0x2402, r15</pre>
+</div>
+<div class="insn" id="insn4608" onclick="togglebreakpoint(this.id)">
+<pre>4608:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn460c" onclick="togglebreakpoint(this.id)">
+<pre>460c:  3040 4044      br	#0x4440 &lt;__stop_progExec__&gt;</pre>
+</div>
+<div class="insn" id="insn4610" onclick="togglebreakpoint(this.id)">
+<pre>4610:  c443 d4ff      mov.b	#0x0, -0x2c(r4)</pre>
+</div>
+<div class="insn" id="insn4614" onclick="togglebreakpoint(this.id)">
+<pre>4614:  3f40 d4ff      mov	#0xffd4, r15</pre>
+</div>
+<div class="insn" id="insn4618" onclick="togglebreakpoint(this.id)">
+<pre>4618:  0f54           add	r4, r15</pre>
+</div>
+<div class="insn" id="insn461a" onclick="togglebreakpoint(this.id)">
+<pre>461a:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn461c" onclick="togglebreakpoint(this.id)">
+<pre>461c:  0f44           mov	r4, r15</pre>
+</div>
+<div class="insn" id="insn461e" onclick="togglebreakpoint(this.id)">
+<pre>461e:  3f50 e9ff      add	#0xffe9, r15</pre>
+</div>
+<div class="insn" id="insn4622" onclick="togglebreakpoint(this.id)">
+<pre>4622:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn4624" onclick="togglebreakpoint(this.id)">
+<pre>4624:  3f50 edff      add	#0xffed, r15</pre>
+</div>
+<div class="insn" id="insn4628" onclick="togglebreakpoint(this.id)">
+<pre>4628:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn462a" onclick="togglebreakpoint(this.id)">
+<pre>462a:  3012 7d00      push	#0x7d</pre>
+</div>
+<div class="insn" id="insn462e" onclick="togglebreakpoint(this.id)">
+<pre>462e:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn4632" onclick="togglebreakpoint(this.id)">
+<pre>4632:  3152           add	#0x8, sp</pre>
+</div>
+<div class="insn" id="insn4634" onclick="togglebreakpoint(this.id)">
+<pre>4634:  c493 d4ff      tst.b	-0x2c(r4)</pre>
+</div>
+<div class="insn" id="insn4638" onclick="togglebreakpoint(this.id)">
+<pre>4638:  0524           jz	#0x4644 &lt;login+0xf4&gt;</pre>
+</div>
+<div class="insn" id="insn463a" onclick="togglebreakpoint(this.id)">
+<pre>463a:  b012 4a44      call	#0x444a &lt;unlock_door&gt;</pre>
+</div>
+<div class="insn" id="insn463e" onclick="togglebreakpoint(this.id)">
+<pre>463e:  3f40 2145      mov	#0x4521 "Access granted.", r15</pre>
+</div>
+<div class="insn" id="insn4642" onclick="togglebreakpoint(this.id)">
+<pre>4642:  023c           jmp	#0x4648 &lt;login+0xf8&gt;</pre>
+</div>
+<div class="insn" id="insn4644" onclick="togglebreakpoint(this.id)">
+<pre>4644:  3f40 3145      mov	#0x4531 "That password is not correct.", r15</pre>
+</div>
+<div class="insn" id="insn4648" onclick="togglebreakpoint(this.id)">
+<pre>4648:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn464c" onclick="togglebreakpoint(this.id)">
+<pre>464c:  c493 faff      tst.b	-0x6(r4)</pre>
+</div>
+<div class="insn" id="insn4650" onclick="togglebreakpoint(this.id)">
+<pre>4650:  0624           jz	#0x465e &lt;login+0x10e&gt;</pre>
+</div>
+<div class="insn" id="insn4652" onclick="togglebreakpoint(this.id)">
+<pre>4652:  1f42 0024      mov	&amp;0x2400, r15</pre>
+</div>
+<div class="insn" id="insn4656" onclick="togglebreakpoint(this.id)">
+<pre>4656:  b012 2847      call	#0x4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn465a" onclick="togglebreakpoint(this.id)">
+<pre>465a:  3040 4044      br	#0x4440 &lt;__stop_progExec__&gt;</pre>
+</div>
+<div class="insn" id="insn465e" onclick="togglebreakpoint(this.id)">
+<pre>465e:  3150 2800      add	#0x28, sp</pre>
+</div>
+<div class="insn" id="insn4662" onclick="togglebreakpoint(this.id)">
+<pre>4662:  3441           pop	r4</pre>
+</div>
+<div class="insn" id="insn4664" onclick="togglebreakpoint(this.id)">
+<pre>4664:  3b41           pop	r11</pre>
+</div>
+<div class="insn" id="insn4666" onclick="togglebreakpoint(this.id)">
+<pre>4666:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4668 &lt;__do_nothing&gt;</pre>
+</div>
+<div class="insn" id="insn4668" onclick="togglebreakpoint(this.id)">
+<pre>4668:  3041           ret</pre>
+</div>
+<div class="insn" id="insn466a" onclick="togglebreakpoint(this.id)">
+<pre>466a:  496e           addc.b	r14, r9</pre>
+</div>
+<div class="insn" id="insn466c" onclick="togglebreakpoint(this.id)">
+<pre>466c:  7661           addc.b	@sp+, r6</pre>
+</div>
+<div class="insn" id="insn466e" onclick="togglebreakpoint(this.id)">
+<pre>466e:  6c69           addc.b	@r9, r12</pre>
+</div>
+<div class="insn" id="insn4670" onclick="togglebreakpoint(this.id)">
+<pre>4670:  6420           jnz	#0x473a &lt;puts+0x12&gt;</pre>
+</div>
+<div class="insn" id="insn4672" onclick="togglebreakpoint(this.id)">
+<pre>4672:  5061 7373      addc.b	0x7373(sp), pc</pre>
+</div>
+<div class="insn" id="insn4676" onclick="togglebreakpoint(this.id)">
+<pre>4676:  776f           addc.b	@r15+, r7</pre>
+</div>
+<div class="insn" id="insn4678" onclick="togglebreakpoint(this.id)">
+<pre>4678:  7264           addc.b	@r4+, sr</pre>
+</div>
+<div class="insn" id="insn467a" onclick="togglebreakpoint(this.id)">
+<pre>467a:  204c           br	@r12</pre>
+</div>
+<div class="insn" id="insn467c" onclick="togglebreakpoint(this.id)">
+<pre>467c:  656e           addc.b	@r14, r5</pre>
+</div>
+<div class="insn" id="insn467e" onclick="togglebreakpoint(this.id)">
+<pre>467e:  6774           subc.b	@r4, r7</pre>
+</div>
+<div class="insn" id="insn4680" onclick="togglebreakpoint(this.id)">
+<pre>4680:  683a           jl	#0x4352 &lt;__none__+0x4352&gt;</pre>
+</div>
+<div class="insn" id="insn4682" onclick="togglebreakpoint(this.id)">
+<pre>4682:  2070           subc	@pc, pc</pre>
+</div>
+<div class="insn" id="insn4684" onclick="togglebreakpoint(this.id)">
+<pre>4684:  6173           subc.b	#0x2, sp</pre>
+</div>
+<div class="insn" id="insn4686" onclick="togglebreakpoint(this.id)">
+<pre>4686:  7377           .word	0x7773</pre>
+</div>
+<div class="insn" id="insn4688" onclick="togglebreakpoint(this.id)">
+<pre>4688:  6f72           subc.b	#0x4, r15</pre>
+</div>
+<div class="insn" id="insn468a" onclick="togglebreakpoint(this.id)">
+<pre>468a:  6420           jnz	#0x4754 &lt;strcpy+0x0&gt;</pre>
+</div>
+<div class="insn" id="insn468c" onclick="togglebreakpoint(this.id)">
+<pre>468c:  746f           addc.b	@r15+, r4</pre>
+</div>
+<div class="insn" id="insn468e" onclick="togglebreakpoint(this.id)">
+<pre>468e:  6f20           jnz	#0x476e &lt;_unexpected_+0x6&gt;</pre>
+</div>
+<div class="insn" id="insn4690" onclick="togglebreakpoint(this.id)">
+<pre>4690:  6c6f           addc.b	@r15, r12</pre>
+</div>
+<div class="insn" id="insn4692" onclick="togglebreakpoint(this.id)">
+<pre>4692:  6e67           addc.b	@r7, r14</pre>
+</div>
+<div class="insn" id="insn4694" onclick="togglebreakpoint(this.id)">
+<pre>4694:  2e00           .word	0x002e</pre>
+</div>
+<div class="insn" id="insn4696" onclick="togglebreakpoint(this.id)">
+<pre>4696:  496e           addc.b	r14, r9</pre>
+</div>
+<div class="insn" id="insn4698" onclick="togglebreakpoint(this.id)">
+<pre>4698:  7661           addc.b	@sp+, r6</pre>
+</div>
+<div class="insn" id="insn469a" onclick="togglebreakpoint(this.id)">
+<pre>469a:  6c69           addc.b	@r9, r12</pre>
+</div>
+<div class="insn" id="insn469c" onclick="togglebreakpoint(this.id)">
+<pre>469c:  6420           jnz	#0x4766 &lt;strcpy+0x12&gt;</pre>
+</div>
+<div class="insn" id="insn469e" onclick="togglebreakpoint(this.id)">
+<pre>469e:  5061 7373      addc.b	0x7373(sp), pc</pre>
+</div>
+<div class="insn" id="insn46a2" onclick="togglebreakpoint(this.id)">
+<pre>46a2:  776f           addc.b	@r15+, r7</pre>
+</div>
+<div class="insn" id="insn46a4" onclick="togglebreakpoint(this.id)">
+<pre>46a4:  7264           addc.b	@r4+, sr</pre>
+</div>
+<div class="insn" id="insn46a6" onclick="togglebreakpoint(this.id)">
+<pre>46a6:  204c           br	@r12</pre>
+</div>
+<div class="insn" id="insn46a8" onclick="togglebreakpoint(this.id)">
+<pre>46a8:  656e           addc.b	@r14, r5</pre>
+</div>
+<div class="insn" id="insn46aa" onclick="togglebreakpoint(this.id)">
+<pre>46aa:  6774           subc.b	@r4, r7</pre>
+</div>
+<div class="insn" id="insn46ac" onclick="togglebreakpoint(this.id)">
+<pre>46ac:  683a           jl	#0x437e &lt;__none__+0x437e&gt;</pre>
+</div>
+<div class="insn" id="insn46ae" onclick="togglebreakpoint(this.id)">
+<pre>46ae:  2070           subc	@pc, pc</pre>
+</div>
+<div class="insn" id="insn46b0" onclick="togglebreakpoint(this.id)">
+<pre>46b0:  6173           subc.b	#0x2, sp</pre>
+</div>
+<div class="insn" id="insn46b2" onclick="togglebreakpoint(this.id)">
+<pre>46b2:  7377           .word	0x7773</pre>
+</div>
+<div class="insn" id="insn46b4" onclick="togglebreakpoint(this.id)">
+<pre>46b4:  6f72           subc.b	#0x4, r15</pre>
+</div>
+<div class="insn" id="insn46b6" onclick="togglebreakpoint(this.id)">
+<pre>46b6:  6420           jnz	#0x4780 &lt;_unexpected_+0x18&gt;</pre>
+</div>
+<div class="insn" id="insn46b8" onclick="togglebreakpoint(this.id)">
+<pre>46b8:  746f           addc.b	@r15+, r4</pre>
+</div>
+<div class="insn" id="insn46ba" onclick="togglebreakpoint(this.id)">
+<pre>46ba:  6f20           jnz	#0x479a &lt;_unexpected_+0x32&gt;</pre>
+</div>
+<div class="insn" id="insn46bc" onclick="togglebreakpoint(this.id)">
+<pre>46bc:  7368           .word	0x6873</pre>
+</div>
+<div class="insn" id="insn46be" onclick="togglebreakpoint(this.id)">
+<pre>46be:  6f72           subc.b	#0x4, r15</pre>
+</div>
+<div class="insn" id="insn46c0" onclick="togglebreakpoint(this.id)">
+<pre>46c0:  742e           jc	#0x43aa &lt;__none__+0x43aa&gt;</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>...</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn46c4" onclick="togglebreakpoint(this.id)">
+<pre>46c4:  1e41 0200      mov	0x2(sp), r14</pre>
+</div>
+<div class="insn" id="insn46c8" onclick="togglebreakpoint(this.id)">
+<pre>46c8:  0212           push	sr</pre>
+</div>
+<div class="insn" id="insn46ca" onclick="togglebreakpoint(this.id)">
+<pre>46ca:  0f4e           mov	r14, r15</pre>
+</div>
+<div class="insn" id="insn46cc" onclick="togglebreakpoint(this.id)">
+<pre>46cc:  8f10           swpb	r15</pre>
+</div>
+<div class="insn" id="insn46ce" onclick="togglebreakpoint(this.id)">
+<pre>46ce:  024f           mov	r15, sr</pre>
+</div>
+<div class="insn" id="insn46d0" onclick="togglebreakpoint(this.id)">
+<pre>46d0:  32d0 0080      bis	#0x8000, sr</pre>
+</div>
+<div class="insn" id="insn46d4" onclick="togglebreakpoint(this.id)">
+<pre>46d4:  b012 1000      call	#0x10</pre>
+</div>
+<div class="insn" id="insn46d8" onclick="togglebreakpoint(this.id)">
+<pre>46d8:  3241           pop	sr</pre>
+</div>
+<div class="insn" id="insn46da" onclick="togglebreakpoint(this.id)">
+<pre>46da:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>46dc &lt;putchar&gt;</pre>
+</div>
+<div class="insn" id="insn46dc" onclick="togglebreakpoint(this.id)">
+<pre>46dc:  2183           decd	sp</pre>
+</div>
+<div class="insn" id="insn46de" onclick="togglebreakpoint(this.id)">
+<pre>46de:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn46e0" onclick="togglebreakpoint(this.id)">
+<pre>46e0:  0312           push	#0x0</pre>
+</div>
+<div class="insn" id="insn46e2" onclick="togglebreakpoint(this.id)">
+<pre>46e2:  814f 0400      mov	r15, 0x4(sp)</pre>
+</div>
+<div class="insn" id="insn46e6" onclick="togglebreakpoint(this.id)">
+<pre>46e6:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn46ea" onclick="togglebreakpoint(this.id)">
+<pre>46ea:  1f41 0400      mov	0x4(sp), r15</pre>
+</div>
+<div class="insn" id="insn46ee" onclick="togglebreakpoint(this.id)">
+<pre>46ee:  3150 0600      add	#0x6, sp</pre>
+</div>
+<div class="insn" id="insn46f2" onclick="togglebreakpoint(this.id)">
+<pre>46f2:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>46f4 &lt;getchar&gt;</pre>
+</div>
+<div class="insn" id="insn46f4" onclick="togglebreakpoint(this.id)">
+<pre>46f4:  0412           push	r4</pre>
+</div>
+<div class="insn" id="insn46f6" onclick="togglebreakpoint(this.id)">
+<pre>46f6:  0441           mov	sp, r4</pre>
+</div>
+<div class="insn" id="insn46f8" onclick="togglebreakpoint(this.id)">
+<pre>46f8:  2453           incd	r4</pre>
+</div>
+<div class="insn" id="insn46fa" onclick="togglebreakpoint(this.id)">
+<pre>46fa:  2183           decd	sp</pre>
+</div>
+<div class="insn" id="insn46fc" onclick="togglebreakpoint(this.id)">
+<pre>46fc:  3f40 fcff      mov	#0xfffc, r15</pre>
+</div>
+<div class="insn" id="insn4700" onclick="togglebreakpoint(this.id)">
+<pre>4700:  0f54           add	r4, r15</pre>
+</div>
+<div class="insn" id="insn4702" onclick="togglebreakpoint(this.id)">
+<pre>4702:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn4704" onclick="togglebreakpoint(this.id)">
+<pre>4704:  1312           push	#0x1</pre>
+</div>
+<div class="insn" id="insn4706" onclick="togglebreakpoint(this.id)">
+<pre>4706:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn470a" onclick="togglebreakpoint(this.id)">
+<pre>470a:  5f44 fcff      mov.b	-0x4(r4), r15</pre>
+</div>
+<div class="insn" id="insn470e" onclick="togglebreakpoint(this.id)">
+<pre>470e:  8f11           sxt	r15</pre>
+</div>
+<div class="insn" id="insn4710" onclick="togglebreakpoint(this.id)">
+<pre>4710:  3150 0600      add	#0x6, sp</pre>
+</div>
+<div class="insn" id="insn4714" onclick="togglebreakpoint(this.id)">
+<pre>4714:  3441           pop	r4</pre>
+</div>
+<div class="insn" id="insn4716" onclick="togglebreakpoint(this.id)">
+<pre>4716:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4718 &lt;getsn&gt;</pre>
+</div>
+<div class="insn" id="insn4718" onclick="togglebreakpoint(this.id)">
+<pre>4718:  0e12           push	r14</pre>
+</div>
+<div class="insn" id="insn471a" onclick="togglebreakpoint(this.id)">
+<pre>471a:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn471c" onclick="togglebreakpoint(this.id)">
+<pre>471c:  2312           push	#0x2</pre>
+</div>
+<div class="insn" id="insn471e" onclick="togglebreakpoint(this.id)">
+<pre>471e:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn4722" onclick="togglebreakpoint(this.id)">
+<pre>4722:  3150 0600      add	#0x6, sp</pre>
+</div>
+<div class="insn" id="insn4726" onclick="togglebreakpoint(this.id)">
+<pre>4726:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4728 &lt;puts&gt;</pre>
+</div>
+<div class="insn" id="insn4728" onclick="togglebreakpoint(this.id)">
+<pre>4728:  0b12           push	r11</pre>
+</div>
+<div class="insn" id="insn472a" onclick="togglebreakpoint(this.id)">
+<pre>472a:  0b4f           mov	r15, r11</pre>
+</div>
+<div class="insn" id="insn472c" onclick="togglebreakpoint(this.id)">
+<pre>472c:  073c           jmp	#0x473c &lt;puts+0x14&gt;</pre>
+</div>
+<div class="insn" id="insn472e" onclick="togglebreakpoint(this.id)">
+<pre>472e:  1b53           inc	r11</pre>
+</div>
+<div class="insn" id="insn4730" onclick="togglebreakpoint(this.id)">
+<pre>4730:  8f11           sxt	r15</pre>
+</div>
+<div class="insn" id="insn4732" onclick="togglebreakpoint(this.id)">
+<pre>4732:  0f12           push	r15</pre>
+</div>
+<div class="insn" id="insn4734" onclick="togglebreakpoint(this.id)">
+<pre>4734:  0312           push	#0x0</pre>
+</div>
+<div class="insn" id="insn4736" onclick="togglebreakpoint(this.id)">
+<pre>4736:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn473a" onclick="togglebreakpoint(this.id)">
+<pre>473a:  2152           add	#0x4, sp</pre>
+</div>
+<div class="insn" id="insn473c" onclick="togglebreakpoint(this.id)">
+<pre>473c:  6f4b           mov.b	@r11, r15</pre>
+</div>
+<div class="insn" id="insn473e" onclick="togglebreakpoint(this.id)">
+<pre>473e:  4f93           tst.b	r15</pre>
+</div>
+<div class="insn" id="insn4740" onclick="togglebreakpoint(this.id)">
+<pre>4740:  f623           jnz	#0x472e &lt;puts+0x6&gt;</pre>
+</div>
+<div class="insn" id="insn4742" onclick="togglebreakpoint(this.id)">
+<pre>4742:  3012 0a00      push	#0xa</pre>
+</div>
+<div class="insn" id="insn4746" onclick="togglebreakpoint(this.id)">
+<pre>4746:  0312           push	#0x0</pre>
+</div>
+<div class="insn" id="insn4748" onclick="togglebreakpoint(this.id)">
+<pre>4748:  b012 c446      call	#0x46c4 &lt;INT&gt;</pre>
+</div>
+<div class="insn" id="insn474c" onclick="togglebreakpoint(this.id)">
+<pre>474c:  2152           add	#0x4, sp</pre>
+</div>
+<div class="insn" id="insn474e" onclick="togglebreakpoint(this.id)">
+<pre>474e:  0f43           clr	r15</pre>
+</div>
+<div class="insn" id="insn4750" onclick="togglebreakpoint(this.id)">
+<pre>4750:  3b41           pop	r11</pre>
+</div>
+<div class="insn" id="insn4752" onclick="togglebreakpoint(this.id)">
+<pre>4752:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4754 &lt;strcpy&gt;</pre>
+</div>
+<div class="insn" id="insn4754" onclick="togglebreakpoint(this.id)">
+<pre>4754:  0d4f           mov	r15, r13</pre>
+</div>
+<div class="insn" id="insn4756" onclick="togglebreakpoint(this.id)">
+<pre>4756:  023c           jmp	#0x475c &lt;strcpy+0x8&gt;</pre>
+</div>
+<div class="insn" id="insn4758" onclick="togglebreakpoint(this.id)">
+<pre>4758:  1e53           inc	r14</pre>
+</div>
+<div class="insn" id="insn475a" onclick="togglebreakpoint(this.id)">
+<pre>475a:  1d53           inc	r13</pre>
+</div>
+<div class="insn" id="insn475c" onclick="togglebreakpoint(this.id)">
+<pre>475c:  6c4e           mov.b	@r14, r12</pre>
+</div>
+<div class="insn" id="insn475e" onclick="togglebreakpoint(this.id)">
+<pre>475e:  cd4c 0000      mov.b	r12, 0x0(r13)</pre>
+</div>
+<div class="insn" id="insn4762" onclick="togglebreakpoint(this.id)">
+<pre>4762:  4c93           tst.b	r12</pre>
+</div>
+<div class="insn" id="insn4764" onclick="togglebreakpoint(this.id)">
+<pre>4764:  f923           jnz	#0x4758 &lt;strcpy+0x4&gt;</pre>
+</div>
+<div class="insn" id="insn4766" onclick="togglebreakpoint(this.id)">
+<pre>4766:  3041           ret</pre>
+</div>
+<div class="insnlabel" onclick="togglebreakpoint(this.id)">
+<pre>4768 &lt;_unexpected_&gt;</pre>
+</div>
+<div class="insn" id="insn4768" onclick="togglebreakpoint(this.id)">
+<pre>4768:  0013           reti	pc</pre>
+</div></code>
+

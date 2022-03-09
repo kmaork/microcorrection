@@ -1,0 +1,219 @@
+{
+  "levels": [
+    {
+      "code": "",
+      "name": "Tutorial",
+      "rating": "10",
+      "needed": [],
+      "done": true,
+      "ready": true,
+      "top": "337",
+      "left": "280"
+    },
+    {
+      "code": "",
+      "name": "New Orleans",
+      "rating": "10",
+      "needed": [
+        "Tutorial"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "386",
+      "left": "228"
+    },
+    {
+      "code": "",
+      "name": "Sydney",
+      "rating": "15",
+      "needed": [
+        "New Orleans"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "600",
+      "left": "1010"
+    },
+    {
+      "code": "",
+      "name": "Hanoi",
+      "rating": "20",
+      "needed": [
+        "Sydney"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "415",
+      "left": "861"
+    },
+    {
+      "code": "",
+      "name": "Cusco",
+      "rating": "25",
+      "needed": [
+        "Hanoi"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "522",
+      "left": "285"
+    },
+    {
+      "code": "",
+      "name": "Reykjavik",
+      "rating": "35",
+      "needed": [
+        "Sydney"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "210",
+      "left": "450"
+    },
+    {
+      "code": "",
+      "name": "Johannesburg",
+      "rating": "20",
+      "needed": [
+        "Cusco"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "568",
+      "left": "616"
+    },
+    {
+      "code": "",
+      "name": "Whitehorse",
+      "rating": "50",
+      "needed": [
+        "Cusco"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "235",
+      "left": "87"
+    },
+    {
+      "code": "",
+      "name": "Addis Ababa",
+      "rating": "50",
+      "needed": [
+        "Hanoi"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "446",
+      "left": "643"
+    },
+    {
+      "code": "",
+      "name": "Montevideo",
+      "rating": "50",
+      "needed": [
+        "Whitehorse"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "596",
+      "left": "336"
+    },
+    {
+      "code": "",
+      "name": "Santa Cruz",
+      "rating": "50",
+      "needed": [
+        "Johannesburg"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "385",
+      "left": "474"
+    },
+    {
+      "code": "",
+      "name": "Jakarta",
+      "rating": "40",
+      "needed": [
+        "Santa Cruz"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "510",
+      "left": "881"
+    },
+    {
+      "code": "",
+      "name": "Novosibirsk",
+      "rating": "40",
+      "needed": [
+        "Addis Ababa"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "284",
+      "left": "767"
+    },
+    {
+      "code": "",
+      "name": "Algiers",
+      "rating": "100",
+      "needed": [
+        "Reykjavik",
+        "Novosibirsk",
+        "Montevideo",
+        "Jakarta"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "360",
+      "left": "540"
+    },
+    {
+      "code": "",
+      "name": "Vladivostok",
+      "rating": "100",
+      "needed": [
+        "Algiers"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "330",
+      "left": "950"
+    },
+    {
+      "code": "",
+      "name": "Bangalore",
+      "rating": "100",
+      "needed": [
+        "Vladivostok"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "438",
+      "left": "766"
+    },
+    {
+      "code": "",
+      "name": "Lagos",
+      "rating": "150",
+      "needed": [
+        "Algiers"
+      ],
+      "done": true,
+      "ready": true,
+      "top": "464",
+      "left": "532"
+    },
+    {
+      "code": "",
+      "name": "Chernobyl",
+      "rating": "300",
+      "needed": [],
+      "done": true,
+      "ready": true,
+      "top": "282",
+      "left": "620"
+    }
+  ]
+}

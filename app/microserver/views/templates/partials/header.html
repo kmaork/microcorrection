@@ -1,0 +1,40 @@
+<header id="header">
+    <div class="wrap clearfix">
+        <span class="logo left">
+            <img id="logo" height="42" src="/static/logo.png">
+        </span>
+        {% if level is defined %}
+        <span class="left nav">
+                <b class="level">{{ level }}</b>
+            </span>
+        {% endif %}
+        <nav class="right nav">
+            <ul>
+                {% if session.get('ADMIN') %}
+                <li>
+                    <a href="{{ url_for('admin.logout') }}">Logout</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('admin.home') }}">Admin</a>
+                </li>
+                {% endif %}
+                <li>
+                    <a href="/">Main</a>
+                </li>
+                <li>
+                    <a href="/assembler">Assembler</a>
+                </li>
+                <li>
+                    <a href="/manual.pdf">Lock Manual</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="flashes">
+    <div class="wrap clearfix">
+    </div>
+</div>
+<script>
+    console.log('%cWhat are you up to, you sick bastard 😒', 'font-size: 30px; color: #f52511; font-weight: bold');
+</script>

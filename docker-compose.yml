@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  test:
+    build: .
+    image: microcorrection
+    container_name: microcorrection
+    command: tox
+    volumes:
+      - ./app:/app
+  dev:
+    environment:
+      - PORT=${PORT:-8000}
+      - CORRUPT_WITH_ADMIN=0
+    build: .
+    image: microcorrection
+    container_name: microcorrection
+    ports:
+      - '${PORT:-8000}:${PORT:-8000}'
+    command: microserver
+    volumes:
+      - ./app/microserver:/app/microserver
+  prod:
+    environment:
+      - PORT=${PORT:-80}
+      - CORRUPT_WITH_ADMIN=0
+    build: .
+    image: microcorrection
+    container_name: microcorrection
+    ports:
+      - '${PORT:-80}:${PORT:-80}'

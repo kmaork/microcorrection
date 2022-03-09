@@ -1,0 +1,50 @@
+Lockitall                                            LOCKIT PRO r d.02
+______________________________________________________________________
+
+              User Manual: Lockitall LockIT Pro, rev d.02             
+______________________________________________________________________
+
+
+OVERVIEW
+
+    - This lock contains the all-new LockIT Pro Account Manager.
+
+
+DETAILS
+
+    The LockIT Pro d.02  is the first of a new series  of locks. It is
+    controlled by a  MSP430 microcontroller, and is  the most advanced
+    MCU-controlled lock available on the  market. The MSP430 is a very
+    low-power device which allows the LockIT  Pro to run in almost any
+    environment.
+
+    The  LockIT  Pro   contains  a  Bluetooth  chip   allowing  it  to
+    communiciate with the  LockIT Pro App, allowing the  LockIT Pro to
+    be inaccessable from the exterior of the building.
+
+    LockIT Pro Account Manager solves the problem of sharing passwords
+    when  multiple users  must  have  access to  a  lock. The  Account
+    Manager contains  a mapping of users  to PINs, each of  which is 4
+    digits.  The  system supports  hundreds of users,  each configured
+    with his or her own PIN,  without degrading the performance of the
+    manager.
+
+    There are no accounts set up  on the LockIT Pro Account Manager by
+    default. An administrator must first initialize the lock with user
+    accounts  and  their  PINs.  User  accounts  are  by  default  not
+    authorized  for access,  but can  be authorized  by attaching  the
+    Account  Manager  Authorizer.  This  prevents  users  from  adding
+    themselves to the lock during its use.
+    
+    This is Hardware  Version D.  It contains  the Bluetooth connector
+    built in, and one available port, to which the LockIT Pro Deadbolt
+    should be connected. When authorizing PINs, the Deadbolt should be
+    disconnected and the Authorizer should be attached in its place.
+
+    This   is  Software   Revision   02.  It   contains  the   all-new
+    vault-manager software.
+
+    
+
+
+(c) 2013 LOCKITALL                                            Page 1/1

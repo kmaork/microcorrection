@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <link href="/static/application-974b835d4cab4eed5e6134e3f82960f8.css" media="screen" rel="stylesheet"
+          type="text/css"/>
+    <title>Admin</title>
+    <style>
+        ol {
+            font-size: 14px;
+        }
+
+        .tipsyit {
+            color: rgb(0, 185, 160);
+        }
+
+        table.admin th {
+            text-align: center;
+        }
+
+        table.admin th, table.admin td {
+            padding: 2px 5px;
+        }
+
+        .wrap {
+            width: 95%;
+        }
+    </style>
+</head>
+<body>
+{% include 'partials/header.html' %}
+<main id='main_content'>
+    <div class='wrap'>
+        <header class='page_header'>
+            <h2>
+                Level links
+            </h2>
+        </header>
+        <table class="admin">
+            <tr>
+                <th>Level</th>
+                <th>Map link</th>
+                <th>Direct link</th>
+            </tr>
+            {% for level_link in level_links %}
+                <tr>
+                    <td><b class="tipsyit">{{ level_link.name }}</b>{{ level_link.get_description() }}</td>
+                    <td><a href="{{ level_link.get_map_url() }}">{{ level_link.get_map_url() }}</a></td>
+                    <td><a href="{{ level_link.get_direct_url() }}">{{ level_link.get_direct_url() }}</a></td>
+                </tr>
+            {% endfor %}
+
+        </table>
+        <section id='markers'></section>
+    </div>
+</main>
+</body>
+</html>
