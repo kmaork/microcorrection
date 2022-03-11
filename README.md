@@ -17,7 +17,7 @@ what it was. Until it is fixed - resetting the app when it hangs works well enou
 ## Develop
 ### Clone
 ```bash
-git clone --recursive https://github.com/kmaork/microcorrection
+git clone --recursive <https://github.com/kmaork/microcorrection.git or git@github.com:kmaork/microcorrection.git>
 ```
 
 ### Run tests
