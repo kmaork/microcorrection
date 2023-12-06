@@ -1,8 +1,6 @@
-# Prepare the building platform
-FROM debian:stretch-slim AS builder
-# Warning: the next line will be cached. If any new package will be needed in the future, this will have to be changed.
-RUN apt-get update
-RUN apt-get update && apt-get install -y --no-install-recommends \
+FROM debian:bookworm-slim AS builder
+RUN apt update
+RUN apt update && apt-get install -y --no-install-recommends \
         gcc \
         make \
         libc6-dev \
@@ -23,11 +21,11 @@ COPY msp430-emu-uctf .
 RUN make msp430-emu
 
 # The app!
-FROM python:3.7-slim-stretch
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        gdb-msp430 \
-        libglib2.0 \
-    && rm -rf /var/lib/apt/lists/*
+FROM python:3.7-slim-bookworm
+RUN echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
+RUN echo "Package: *\nPin: release a=unstable\nPin-Priority: 90" > /etc/apt/preferences.d/unstable.pref
+RUN apt update
+RUN apt update && apt -t unstable install --no-install-recommends -y gdb-msp430 && apt install -y --no-install-recommends libglib2.0-0
 COPY --from=naken_builder /naken_asm/naken_asm /bin
 COPY --from=naken_builder /naken_asm/naken_util /bin
 COPY --from=emulator_builder /msp430-emu-uctf/msp430-emu /bin
