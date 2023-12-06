@@ -1,4 +1,4 @@
-FROM debian:stretch-slim AS builder
+FROM debian:bookwork-slim AS builder
 RUN apt update
 RUN apt update && apt-get install -y --no-install-recommends \
         gcc \
@@ -21,7 +21,7 @@ COPY msp430-emu-uctf .
 RUN make msp430-emu
 
 # The app!
-FROM python:3.7-slim-stretch
+FROM python:3.7-slim-bookwork
 RUN apt update
 RUN apt update && apt install -y --no-install-recommends \
         gdb-msp430 \
