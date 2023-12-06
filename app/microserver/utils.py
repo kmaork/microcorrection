@@ -87,7 +87,7 @@ def thread_safe(func: Callable) -> Callable:
             try:
                 return func(self, *args, **kwargs)
             finally:
-                rlock.release()
+                self.lock.release()
         else:
             raise TimeoutError(f"Timed out watiting for lock to call {func.__name__}")
 
