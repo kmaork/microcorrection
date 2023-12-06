@@ -9,11 +9,6 @@ Or with a specific port:
 ```bash
 PORT=1234 docker-compose up prod
 ```
-Note: the code here is far from being ready for production use, but there is one particularly
-nasty bug that you will probably run into from time to time. There is some condition that causes a worker thread
-to hang, and after a while using the app, all the gunicorn threads might hang at some point. Then the
-whole app wouldn't respond. I've once found the issue causing the hang, but didn't fix it and then forgot
-what it was. Until it is fixed - resetting the app when it hangs works well enough :)
 
 ## Develop
 ### Clone

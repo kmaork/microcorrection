@@ -83,7 +83,12 @@ class ThreadSafe:
 def thread_safe(func: Callable) -> Callable:
     @wraps(func)
     def wrapper(self, *args, **kwargs):
-        with self.lock:
-            return func(self, *args, **kwargs)
+        if self.lock.acquire(timeout=15 * 60):
+            try:
+                return func(self, *args, **kwargs)
+            finally:
+                self.lock.release()
+        else:
+            raise TimeoutError(f"Timed out watiting for lock to call {func.__name__}")
 
     return wrapper
