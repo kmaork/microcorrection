@@ -1,4 +1,5 @@
 # Microcorrection
+A standalone, offline version of microcorruption, based on https://microcorruption.com/.
 ## Use
 ```bash
 docker-compose build prod
