@@ -1,8 +1,6 @@
-# Prepare the building platform
 FROM debian:stretch-slim AS builder
-# Warning: the next line will be cached. If any new package will be needed in the future, this will have to be changed.
-RUN apt-get update
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt update
+RUN apt update && apt-get install -y --no-install-recommends \
         gcc \
         make \
         libc6-dev \
@@ -24,7 +22,8 @@ RUN make msp430-emu
 
 # The app!
 FROM python:3.7-slim-stretch
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt update
+RUN apt update && apt install -y --no-install-recommends \
         gdb-msp430 \
         libglib2.0 \
     && rm -rf /var/lib/apt/lists/*
