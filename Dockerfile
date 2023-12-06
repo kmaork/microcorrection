@@ -21,7 +21,7 @@ COPY msp430-emu-uctf .
 RUN make msp430-emu
 
 # The app!
-FROM python:3.7-slim-bookworm
+FROM python:3.12-slim-bookworm
 RUN echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
 RUN echo "Package: *\nPin: release a=unstable\nPin-Priority: 90" > /etc/apt/preferences.d/unstable.pref
 RUN apt update
