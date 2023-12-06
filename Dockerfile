@@ -22,10 +22,12 @@ RUN make msp430-emu
 
 # The app!
 FROM python:3.7-slim-bookworm
+RUN echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
+RUN echo -e "Package: *\nPin: release a=unstable\nPin-Priority: 90" > /etc/apt/preferences.d/unstable.pref
 RUN apt update
 RUN apt update && apt install -y --no-install-recommends \
         gdb-msp430 \
-        libglib2.0 \
+        libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=naken_builder /naken_asm/naken_asm /bin
 COPY --from=naken_builder /naken_asm/naken_util /bin
